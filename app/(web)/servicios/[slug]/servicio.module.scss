@@ -1,0 +1,48 @@
+@use "../../../../styles/tokens" as *;
+
+.main {
+  width: min(100% - ($gutter * 2), 760px);
+  margin: 0 auto;
+  padding: 64px 0 96px;
+}
+
+.back {
+  color: $accent;
+  font-size: 14px;
+}
+
+.title {
+  margin: 24px 0 0;
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.summary {
+  margin: 16px 0 0;
+  color: $muted;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin-top: 32px;
+  border-radius: 20px;
+}
+
+.body {
+  margin-top: 40px;
+  font-size: 17px;
+  line-height: 1.7;
+
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+.status {
+  color: $muted;
+}

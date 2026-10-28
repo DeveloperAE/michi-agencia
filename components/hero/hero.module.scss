@@ -1,0 +1,84 @@
+@use "../../styles/tokens" as *;
+
+.hero {
+  width: min(100% - ($gutter * 2), $max);
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.copy {
+  max-width: 640px;
+}
+
+.kicker {
+  margin: 0;
+  color: $accent;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 16px 0 0;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+.text {
+  margin: 20px 0 0;
+  max-width: 46ch;
+  color: $muted;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 28px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: $ink;
+  color: $cream;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.media {
+  margin: 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.empty {
+  margin: 0;
+  color: $muted;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding: 48px 0 72px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
